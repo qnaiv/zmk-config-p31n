@@ -48,9 +48,9 @@
 
 		fn2_layer {
             bindings = <
-            &kp TILDE &kp PRCNT &kp UNDER &kp CARET  &kp LBKT  &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
-            &kp AT    &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp HOME    &kp PG_UP    &kp UP      &kp PG_DN  
-            &kp LSHFT  &kp LALT  &kp LCTRL &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
+            &kp TAB &kp PRCNT &kp UNDER &kp CARET  &kp LBKT  &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
+            &kp LSHFT    &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp HOME    &kp PG_UP    &kp UP      &kp PG_DN  
+            &kp LCTRL  &kp LALT  &kp LWIN &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
             >;
 		};
 
