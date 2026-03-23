@@ -72,34 +72,34 @@
         combo_kl {
             timeout-ms = <50>;
             key-positions = <18 19>;
-            bindings = <&mkp LBKT>;
+            bindings = <&kp LEFT_BRACKET>;
         };
 
         // L + ENT = しかくかっことじ
         combo_lenter {
             timeout-ms = <50>;
             key-positions = <19 20>;
-            bindings = <&mkp RBKT>;
+            bindings = <&kp RIGHT_BRACKET>;
         };
 
         // M + , = slash
         combo_slash {
             timeout-ms = <50>;
-            key-positions = <28 29>;
+            key-positions = <29 30>;
             bindings = <&kp SLASH>;
         };
 
         // ,+ . = backslash
         combo_backslash {
             timeout-ms = <50>;
-            key-positions = <29 30>;
+            key-positions = <30 31>;
             bindings = <&kp BACKSLASH>;
         };
 
         // , +. = あいう (日本語入力 / かな)
         combo_kana {
             timeout-ms = <50>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
             bindings = <&kp LANG1>; // Windowsの場合は &kp INT_HENKAN を推奨
         };
     };
@@ -123,9 +123,9 @@
             // |   A   |   S   |   D   |   F   |   G   |    ----   |   H   |   J   |   K    |   L    |  Ent  |
             // | LG,Z  |  LA,X | LC,C  | LS,V  | LT1,B | LT3,SPACE | LT2,N | RS,M  | RS,TAb | RA,ESC | RG,BS | 
             bindings = <
-            &mt TAB Q      &mt ESC W        &kp E         &kp R        &kp T       &none         &kp Y      &kp U         &kp I            &kp O          &mt MINUS P    
-            &mt LSHFT A    &mt LWIN S       &mt LALT D    &mt LSHFT F  &mt LCTRL G &none         &mt LCTRL H      &mt LSHFT J   &mt LALT K       &mt LWIN L     &kp ENTER
-            &mt LCTRL Z    &mt LALT X   &mt LWIN C    &mt LSHFT V  &lt 1 B    &lt 3 SPACE   &lt 2 N    &mt LSHFT M   &mt LALT COMMA  &mt LCTRL DOT   &kp BSPC
+            &mt TAB Q      &mt ESC W        &kp E         &kp R        &kp T       &none         &kp Y        &kp U         &kp I            &kp O          &mt MINUS P    
+            &mt LSHFT A    &mt LWIN S       &mt LALT D    &mt LSHFT F  &mt LCTRL G &none         &mt LCTRL H  &mt LSHFT J   &mt LALT K       &mt LWIN L     &kp ENTER
+            &mt LCTRL Z    &mt LALT X       &mt LWIN C    &lt 1 V      &lt 1 B     &lt 3 SPACE   &lt 2 N      &lt 2 M       &mt LALT COMMA  &mt LCTRL DOT   &kp BSPC
             >;
 		};
 
@@ -140,7 +140,7 @@
 		fn2_layer {
             bindings = <
             &kp TAB    &kp PRCNT &kp UNDER &kp CARET  &kp LBKT       &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
-            &kp LSHFT  &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp LEFT    &kp DOWN    &kp RIGHT      &kp PG_DN  
+            &kp LSHFT  &kp LWIN   &kp LALT  &kp LSHFT  &mt LCTRL       &none          &kp RPAR  &kp LEFT    &kp DOWN    &kp RIGHT      &kp PG_DN  
             &kp LCTRL  &kp LALT  &kp LWIN  &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
             >;
 		};
