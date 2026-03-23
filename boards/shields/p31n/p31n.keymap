@@ -139,9 +139,9 @@
 
 		fn2_layer {
             bindings = <
-            &kp TAB    &kp PRCNT &kp UNDER &kp CARET  &kp LBKT       &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
-            &kp LSHFT  &kp LWIN   &kp LALT  &kp LSHFT  &mt LCTRL       &none          &kp RPAR  &kp LEFT    &kp DOWN    &kp RIGHT      &kp PG_DN  
-            &kp LCTRL  &kp LALT  &kp LWIN  &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
+            &kp TAB    &kp PRCNT &kp UNDER &kp CARET  &kp LBKT         &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
+            &kp LSHFT  &kp LWIN  &kp LALT  &kp LSHFT  &mt LCTRL        &none          &kp LEFT  &kp DOWN    &kp RIGHT   &none       &none
+            &kp LCTRL  &kp LALT  &kp LWIN  &kp LSHFT  &kp EQUAL        &kp LG(SPACE)  &to 0     &none       &none       &none       &none      
             >;
 		};
 
