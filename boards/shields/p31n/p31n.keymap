@@ -12,7 +12,21 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 
+&mt {
+    flavor = "balanced";
+};
+
 / {
+      combos {
+        compatible = "zmk,combos";
+
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <11 12>; // SとDに該当する物理キーの位置番号
+            bindings = <&kp TAB>;
+        };
+    };
+    
       macros {
         xtips: xtips {
             compatible = "zmk,behavior-macro";
@@ -32,8 +46,8 @@
             // |   A   |   S   |   D   |   F   |   G   |    ----   |   H   |   J   |   K    |   L    |  Ent  |
             // | LG,Z  |  LA,X | LC,C  | LS,V  | LT1,B | LT3,SPACE | LT2,N | RS,M  | RS,TAb | RA,ESC | RG,BS | 
             bindings = <
-            &mt TAB Q      &kp W        &kp E         &kp R        &kp T      &none         &kp Y      &kp U         &kp I            &kp O          &kp P    
-            &mt LSHFT A    &kp S        &kp D         &kp F        &kp G      &none         &kp H      &kp J         &kp K            &kp L          &kp ENTER
+            &mt TAB Q      &mt ESC W        &kp E         &kp R        &kp T       &none         &kp Y      &kp U         &kp I            &kp O          &mt MINUS P    
+            &mt LSHFT A    &mt LWIN S       &mt LALT D    &mt LSHFT F  &mt LCTRL G &none         &mt LCTRL H      &mt LSHFT J   &mt LALT K       &mt LWIN L     &kp ENTER
             &mt LCTRL Z    &mt LALT X   &mt LWIN C    &mt LSHFT V  &lt 1 B    &lt 3 SPACE   &lt 2 N    &mt LSHFT M   &mt LALT COMMA  &mt LCTRL DOT   &kp BSPC
             >;
 		};
@@ -48,9 +62,9 @@
 
 		fn2_layer {
             bindings = <
-            &kp TAB &kp PRCNT &kp UNDER &kp CARET  &kp LBKT  &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
-            &kp LSHFT    &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp HOME    &kp PG_UP    &kp UP      &kp PG_DN  
-            &kp LCTRL  &kp LALT  &kp LWIN &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
+            &kp TAB    &kp PRCNT &kp UNDER &kp CARET  &kp LBKT       &none          &kp RBKT  &kp HOME    &kp UP      &kp END     &kp PG_UP  
+            &kp LSHFT  &kp DQT   &kp EXCL  &kp QMARK  &kp LPAR  &none          &kp RPAR  &kp LEFT    &kp DOWN    &kp RIGHT      &kp PG_DN  
+            &kp LCTRL  &kp LALT  &kp LWIN  &kp LSHFT  &kp EQUAL &kp LG(SPACE)  &to 0     &kp END    &kp LEFT    &kp DOWN    &kp RIGHT      
             >;
 		};
 
