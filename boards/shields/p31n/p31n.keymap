@@ -19,14 +19,91 @@
 / {
       combos {
         compatible = "zmk,combos";
+// W + E = ESC
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <1 2>; // WとEの位置番号に修正してください
+            bindings = <&kp ESC>;
+        };
 
+        // S + D = Tab
         combo_tab {
             timeout-ms = <50>;
-            key-positions = <11 12>; // SとDに該当する物理キーの位置番号
+            key-positions = <12 13>;
             bindings = <&kp TAB>;
         };
+
+        // D + F = BackSpace
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp BSPC>;
+        };
+
+        // X + C = ABC (英語入力 / 英数)
+        combo_eng {
+            timeout-ms = <50>;
+            key-positions = <21 22>;
+            bindings = <&kp LANG2>; // Windowsの場合は &kp INT_MUHENKAN を推奨
+        };
+
+        // F + J = Caps Word (左右をまたぐコンボ)
+        combo_caps_word {
+            timeout-ms = <50>;
+            key-positions = <13 16>;
+            bindings = <&caps_word>;
+        };
+
+        // I + O = ハイフン
+        combo_hyphen {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp MINUS>;
+        };
+
+        // O + P = プラス
+        combo_plus {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            bindings = <&kp PLUS>;
+        };
+
+        // K + L = しかくかっこはじめ
+        combo_kl {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&mkp LBKT>;
+        };
+
+        // L + ENT = しかくかっことじ
+        combo_lenter {
+            timeout-ms = <50>;
+            key-positions = <19 20>;
+            bindings = <&mkp RBKT>;
+        };
+
+        // M + , = slash
+        combo_slash {
+            timeout-ms = <50>;
+            key-positions = <28 29>;
+            bindings = <&kp SLASH>;
+        };
+
+        // ,+ . = backslash
+        combo_slash {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            bindings = <&kp BACKSLASH>;
+        };
+
+        // , +. = あいう (日本語入力 / かな)
+        combo_kana {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            bindings = <&kp LANG1>; // Windowsの場合は &kp INT_HENKAN を推奨
+        };
     };
-    
+
       macros {
         xtips: xtips {
             compatible = "zmk,behavior-macro";
