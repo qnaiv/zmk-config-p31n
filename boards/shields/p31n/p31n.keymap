@@ -19,7 +19,7 @@
 / {
       combos {
         compatible = "zmk,combos";
-// W + E = ESC
+      // W + E = ESC
         combo_esc {
             timeout-ms = <50>;
             key-positions = <1 2>; // WとEの位置番号に修正してください
@@ -90,7 +90,7 @@
         };
 
         // ,+ . = backslash
-        combo_slash {
+        combo_backslash {
             timeout-ms = <50>;
             key-positions = <29 30>;
             bindings = <&kp BACKSLASH>;
